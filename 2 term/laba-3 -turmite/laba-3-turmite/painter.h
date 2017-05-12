@@ -11,19 +11,6 @@
 #include <GLUT/GLUT.h>
 #include <OpenGL/OpenGL.h>
 
-//#include <Windows.h>
-
-//#define COLOR0 RGB(255, 255, 255)
-//
-//#define COLOR1 RGB(255, 0, 0)
-//#define COLOR2 RGB(0, 255, 0)
-//#define COLOR3 RGB(0, 0, 255)
-//
-//#define COLOR4 RGB(255, 255, 0)
-//#define COLOR5 RGB(255, 0, 255)
-//#define COLOR6 RGB(0, 255, 255)
-
-//void drawMite(HDC &hdc, int x, int y, int size, int col_index) {
 void drawMite(int x, int y, int size, int col_index) {
     glBegin(GL_POINTS);
     
