@@ -73,22 +73,17 @@ Turmite Turmite::read(const char *filename) {
 void Turmite::simulate() {
     Rule *rule;
     draw();
-//    std::system("Pause");
     
     while (rule = selectRule()) {
         applyRule(rule);
         
         if (x < sz || y < sz || x > 300 || y > 300) {
-//            std::system("cls");
             glClear(GLUT_DOUBLE);
             cout << "Field bounds reached!" << endl;
-//            std::system("Pause");
             return;
         }
         else {
             draw();
-//            std::system("cls");
-//            std::system("Pause");
             glClear(GLUT_DOUBLE);
 
         }
