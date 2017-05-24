@@ -62,7 +62,6 @@ void Scene::initializeGL()
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_SMOOTH);
     glEnable(GL_MULTISAMPLE);
-    //static GLfloat lightPosition[4] = { 0.5, 5.0, 7.0, 1.0 };
 }
 
 void Scene::paintGL()
@@ -121,7 +120,6 @@ void Scene::paintColorBuf()
         GLubyte r = c & 0xFF;
         GLubyte g = (c >> 8) & 0xFF;
         GLubyte b = (c >> 16) & 0xFF;
-        //qDebug() << r << g << b;
         glColor3ub(r,g,b);
         figures[i]->drawGeometryOnly();
     }
@@ -132,7 +130,6 @@ uint Scene::figureOnPoint(const QPoint &point)
     paintColorBuf();
     GLubyte v[3];
     glReadPixels(point.x(), height() - point.y(), 1,1, GL_RGB, GL_UNSIGNED_BYTE, &v);
-    //qDebug() << v[0] << v[1] << v[2];
     repaint();
     return (((v[2]<<8) + v[1])<<8)+v[0];
 }
@@ -188,7 +185,6 @@ void Scene::mouseMoveEvent(QMouseEvent *e)
     int dy = e->y() - mouseLastPos.y();
 
     if (e->buttons() & Qt::MidButton && currentView == vt3D) {
-        //camera.rotatePositionUp(dy/50.f);
         cameras[0]->rotatePositionY(dx/50.f);
     }
 
