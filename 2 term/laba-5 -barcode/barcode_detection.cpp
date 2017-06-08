@@ -57,9 +57,9 @@ Mat BarcodeDetector::getImageWithRectangle(Mat graddDiff) {
         // get the frame
         Rect rect = crop(thres, MaxPoint);
         
-        int borderWidth = 3;
+        int borderWidth = 2;
         
-        Scalar borderColor(0, 255, 0);
+        Scalar borderColor(255, 69, 0);
         
         // Draw rectangle
         rectangle(this->image, rect, borderColor, borderWidth);
