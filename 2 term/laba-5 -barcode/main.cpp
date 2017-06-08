@@ -28,7 +28,7 @@ Mat downloadImage(string fileName) {
 //    imwrite(fileName.c_str(), image);
 //}
 
-int main(int argc, const char **argv) {
+int main (int argc, const char **argv) {
     
     BarcodeDetector D;
     
