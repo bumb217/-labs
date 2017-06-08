@@ -15,7 +15,7 @@ Mat BarcodeDetector::gradDifference() {
     Mat gradX, gradY;
     Mat absGradX, absGradY;
     
-    // Get gray version f the image
+    // Get gray version of the image
     cvtColor(this->image, this->grayImage, CV_BGR2GRAY);
     
     // Gradient X
@@ -59,7 +59,7 @@ Mat BarcodeDetector::getImageWithRectangle(Mat graddDiff) {
         
         int borderWidth = 2;
         
-        Scalar borderColor(255, 69, 0);
+        Scalar borderColor(0, 69, 255);
         
         // Draw rectangle
         rectangle(this->image, rect, borderColor, borderWidth);
